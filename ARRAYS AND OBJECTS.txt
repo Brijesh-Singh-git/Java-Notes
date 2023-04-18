@@ -1,0 +1,116 @@
+LIST OF OBJECT METHODS
+
+Object.freeze()
+// It will freeze the obejct
+We cannot perform update or delete in Freeze we can only read the data 
+
+Object.hasOwnProperty()
+//It will check if that property exisit in object or not 
+and it will return the ans in True or False 
+
+
+
+---------FUNCTIONS------------
+
+Node----
+
+
+pwd -- it will choose the current directory
+ls --- it will show all the files 
+cd -- change directory 
+
+
+
+ARRAY METHODS------------------
+
+map() ---> it is immutable ( This function basically copy the original array)
+
+filter() ---> 
+
+find() ---> If value found it will return the number else if not found it will return undefined
+
+
+Immutuable --- > Fixed  ( A function which cannot cahnge the original array)
+Mutable ----> Not Fixed ( A function which can modify original array)
+
+
+push is not a higher order function
+push is a mutable method 
+
+Benefit of hidden door in Array Javascript 
+
+
+
+What is higher order function?
+What is first class citizen
+
+
+---------Arrow Function -------
+//It is not preferred where big lines of code is written
+// IT is  ostly used where small program is written 
+
+https://medium.com/@sachinamit0055/scope-chaining-made-easy-a-beginners-guide-to-javascript-scopes-a75633706a91
+
+for each ---->  
+
+
+
+
+
+---------------Pass by value and Pass by Refernce ------------------------
+
+
+
+
+
+
+what is oops
+what is the differnece betwwen c++ and jav
+what is a class in java 
+what is scrum 
+
+
+
+
+
+Lexical Scope 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,369 @@
+Oop tries to map code instructions with real world making the code short and easier to understand.
+
+Solving a probelm by creating objects is one of the most popular approaches in programming.
+
+-------------------------------
+Class ---> A Class is a blueprint for creating objects.
+
+CLass contains a valid information to create a valid object.
+
+-------------------------
+Object ---> Object is an instantaion of a class. When a class is defined a template is defined. Memory is allocated only after object instatntion.
+
+
+For example:-   Class ---------> Employee
+				Attributes -----> name, age, salary
+				Methods -------> getSalary(), increment()
+
+
+
+
+--------------------------
+Terminologies in Oops:- 
+
+1) Abstraction:- Hiding internal deatils i.e - showing only essential information 
+
+				 eg-  Using the cellphone without bothering how it was made
+				 
+				 
+				 
+2) Encapsulation:- The act of putting various components together( in a capsule),
+					In Java, encapsulation simply means that the sensitive data can be hidden from the users.
+					
+				   eg- Laptop is a single entity with Wifi + speaker +storage in a single box
+				   
+				   
+3) Inheritance:-  The act of deriving new things from existing things. 
+				  Inheritance implents DRY(Don not repeat yourself)
+					
+				  eg:- Rikshaw -----> E-Rikshaw
+					   Phone -------> SmartPhone 
+					  
+					
+					
+4) Polymorphism:- One entity many forms  
+				  the ability of a class to provide different implementations of a method, 
+				  depending on the type of object that is passed to the method.
+
+				  eg:- Smartphone -----> Phone 
+					   Smartphone -----> Calculator
+					   
+
+---------------------------------------
+
+There will be only 1 public class in Java
+
+--------------------------------------- 
+---------------------------------------
+ACCESS MODIFIERS & CONSTRUCTORS 
+
+Access Modifiers:- It specifies where a property/method is accessible.
+				
+	a)Private:- 
+	b)Default:-
+	c)Protected:-
+	d)Public:-
+	
+----------------------
+Getters & Setters 
+
+Getter:- It returns the value of the variable [accessors]
+Setter:- It set/update the value of the variable [mutators]
+
+
+
+---------------------------------------------------
+                   CONSTRUCTORS
+----------------------------------------------------
+A constructor is a member function used to initialize an object while creating it
+The constructor name must match the class name, and it cannot have a return type (like void).
+
+
+example:- 
+
+/ Create a Main class
+public class Main {
+  int x;  // Create a class attribute
+
+  // Create a class constructor for the Main class
+  public Main() {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
+    System.out.println(myObj.x); // Print the value of x
+  }
+}
+
+
+
+--------------------------------------------------
+*****************INHERITANCE in Detail************
+----------------------------------------------------
+In Java, it is possible to inherit attributes and methods from one class to another
+
+In simple way --> Inheritance is used to borrow properties and methods from an existing class.
+ 
+ Why And When To Use "Inheritance"?
+- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
+
+ 
+Inheritance is declared using "extends" keyword
+
+--->subclass (child) - the class that inherits from another class
+--->superclass (parent) - the class being inherited from
+
+SUBCLASS extends SUPERCLASS
+
+
+When a class inherits from a superclass, it inherits parts of supercalss methods and fields. 
+Java dosen't support multiple inheritance i.e. two classes cannot be superclass from a subclass.
+
+
+The final Keyword --> If you don't want other classes to inherit from a class, use the final keyword:
+
+example:- 
+final class Vehicle {
+  ...
+}
+
+class Car extends Vehicle {
+  ...
+}
+
+OUTPUT:-
+error:- Main.java:9: error: cannot inherit from final Vehicle
+class Main extends Vehicle {
+                  ^
+1 error)
+
+
+---------------------------------------------------
+           METHOD OVERRIDING
+----------------------------------------------------
+
+If (child class) has the same method as declared in the parent class, 
+it is known as method overriding in Java.
+
+If a subclass provides the specific implementation of the method that has been declared by one of its parent class, 
+it is known as method overriding. 
+
+
+Rules for Java Method Overriding:-
+
+1) The method must have the same name as in the parent class
+2) The method must have the same parameter as in the parent class.
+3) There must be an IS-A relationship (inheritance).
+
+
+example:- 
+
+class A{
+ public int a;
+ public int harry(){
+  return 4;
+} 
+ public void meth2(){
+	system.out.println("I am method 2 of class A");
+	
+	}
+	}
+	
+class B extends A {
+	
+	@Override
+	public void meth2(){ //This method is overriding the meth2 of class A
+	system.out.println("I am method 2 of class B");
+	
+	}
+	public void meth3(){
+	system.out.println("I am method 3 of class B");
+	
+	} 
+	}
+public class overriding {
+	public static void main(String[] args){
+	
+	Output a = new Output(){
+		a.meth2();
+		a.meth3();
+		}
+		}
+
+OUTPUT:-  I am method 2 of class B
+		  I am method 3 of class B
+
+
+
+
+-------------------------------------------------
+		Abstract Classes and Methods 
+----------------------------------------------------		
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces. 
+
+
+
+Abstract Method:-> A method that is decalred without an implementation(without braces, and followed by a semicolon), like this:
+
+	abstract void moveTo(double deltaX, double deltaY);
+
+
+Abstract Class:-> It is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+				 i.e. If a class includes abstract methods, then the class itself must be decalred abstract.
+
+An abstract class can have both abstract and regular methods:
+
+
+If there is any abstract method in a class the whole class is changed to abstract class.
+
+public abstract class GraphicObject {
+   // declare fields
+   // declare nonabstract methods
+   abstract void draw();
+}
+
+
+
+Why And When To Use Abstract Classes and Methods?
+
+To achieve security - hide certain details and only show the important details of an object.
+
+
+
+example:--
+
+
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
+
+
+-------------------------------------------------
+		          JAVA INTERFACES
+----------------------------------------------------	
+
+
+Another way to achieve abstraction in Java, is with interfaces.
+
+An interface is a completely "abstract class" that is used to group related methods with empty bodies:
+
+In java, interface is a group of related methods with empty bodies.
+
+To use INTERFACE we use "implement" keyword
+
+example:-
+
+// Interface
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void sleep(); // interface method (does not have a body)
+}
+
+// Pig "implements" the Animal interface
+class Pig implements Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+  public void sleep() {
+    // The body of sleep() is provided here
+    System.out.println("Zzz");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig();  // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
+
+Notes on Interfaces:
+
+1) Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass)
+2) Interface methods do not have a body - the body is provided by the "implement" class
+3) On implementation of an interface, you must override all of its methods
+4) Interface methods are by default abstract and public
+5) Interface attributes are by default public, static and final
+6) An interface cannot contain a constructor (as it cannot be used to create objects)
+
+
+Why And When To Use Interfaces?
+
+1) To achieve security - hide certain details and only show the important details of an object (interface).
+
+
+
+
+
+-------------------------------------------------
+		          ABSTRACT CLASS vs INTERFACES
+----------------------------------------------------	
+
+
+Abstract Class                                   Interafce
+
+1) Abstract class can have abstract           1) nterface can have only abstract methods. Since Java 8, it can have default and static methods also.
+and non-abstract methods.
+
+
+2) Abstract class doesn't support             2) Interface supports multiple inheritance.
+multiple inheritance.
+
+
+3) Abstract class can provide                 3) Interface can't provide the implementation of abstract class.
+the implementation of interface.
+
+
+4) An abstract class can extend               4) An interface can extend another Java interface only.
+another Java class and implement 
+multiple Java interfaces.
+
+
+5) An abstract class can be                   5) An interface can be implemented using keyword "implements".
+extended using keyword "extends".
+
+
+6) A Java abstract class can have class 	  6)Members of a Java interface are public by default.
+members like private, protected, etc.
+
+7) We can modify the properties here          7) You cannot modify the properties in Interafce as they are final.
+											  
+
+
+
+
+
+
+
+
+
+
+

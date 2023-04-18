@@ -1,0 +1,28 @@
+Before java 8 when we used interface we cannot define the body of the interface i.e. onlt method was there.
+
+But now in java 8 feature we can actually define the method inside the interface using the default keyword, we can aslo override the deault methods 
+
+interface Hello{
+	
+	void add();
+	default void show(){
+		
+		}
+		
+		}
+		
+Java dosen't support Multiple iheritance as it creates the diamond probelm, but in interface we can get multiple inheritance
+
+
+Java 8 support static methods 
+
+interface I {
+	
+	static void show(){
+		syso("HELLO");
+		} 
+		}
+		
+		static methods is used for common functionality
+		
+		default is used for instance to instance

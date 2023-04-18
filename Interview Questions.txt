@@ -1,0 +1,18 @@
+INTERVIEW QUESTIONS
+
+Q. What are Objects in JavaScript?
+Q. What is fucntion in JavaScript?
+Q. What are text-formatiign tags in HTML?
+Q. 
+
+
+give self intro
+Repeat the statement of the question and explain what does it mean
+Expain the solution ---- what is natural number , explain the approach and then conclusion for full code in 2-3 min
+
+ 
+ 
+ 
+ 
+ 
+ 

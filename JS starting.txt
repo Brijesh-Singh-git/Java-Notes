@@ -1,0 +1,237 @@
+Javascript Function Up
+
+
+http://www.javascriptkit.com/script/script2/arrowimage.shtml
+http://javascriptkit.com/script/script2/accept_term.shtml
+http://www.javascriptkit.com/script/script2/ageguess.shtml
+http://javascriptkit.com/script/script2/lovetest.shtml
+http://www.javascriptkit.com/script/script2/hangman2/index.shtml
+
+JS is object oriented 
+
+Js has key value pairs 
+
+name is key and john is pairs
+
+
+document.write("Hello this method is used to write some content in a document")
+document.innerHtml --> This is also used to write some content in a document
+
+innerHTML will always replace content 
+
+window.alert ---> window keyword is used for browser operation
+
+
+
+Calculation in JS is always done LEFT TO RIGHT 
+
+
+-----------CONCATENATION -------------
+
+console.log("a");
+
+console.log("Hello" + "world")
+
+console.log("Hello" + " " + "world")
+
+console.log("Hi" + 32)
+console.log("15" +"all")
+
+console.log(3+2 +"hi" +5)
+console.log(3+2 +"hi" +5+5)
+console.log(3+2 +"hi" +5+5 +"Hello" + 5 + 7 + 5 + 4 + "RIGHTNOW" + 4 +2)
+console.log("hi" +5+5 +"Hello" + 5 + 7 + 5 + 4 + "RIGHTNOW" + 4 +2)
+console.log("hello" + (2+3))
+console.log("hello" + 2+3)
+
+
+----------------VARIABLES------------
+
+
+variables are used to store the data i.e. reserve the value 
+
+*********RULES FOR NAMING VARIABLES**************
+
+1. variables names can contain letters, numbers, _ , $
+2. Names will always begins with a letter , never with a number
+3. variables names are case sensitive
+4. don't use reserve words
+
+
+var str = "LEarn tbe most powerful lahagskjbajk"
+
+  document.getElementById("xyz").innerHTML = str 
+
+  document.getElementById("xyz").innerHTML = document.getElementById("xyz").innerHTML + str;
+  
+  
+  
+  FUNCTIONS------------------
+ 
+
+
+1. Functions are the block of codes designed to perform a particular some teask that will call upon
+2. Functions are names similars as variables
+3. Functions takes i/p as parameter or arguments
+
+
+function addNo(a,b){
+    return a+b;
+}
+
+document.getElementById('box').innerHTML = addNo(12,4)
+
+
+ 
+-->Js function defined with a function keyword, it will followed by a function_Name and, followed by the Parameters in parenthesis
+-->the code to be executed by the function is placed inside the curly braces
+
+The most commonly used events are onClick & onMouseover
+
+Return will send back the value in that line whenever the function is called 
+Once the return is writtem ext line will never gets executed
+
+This---> regers to the entire content 
+ 
+
+------QUERY SELECTOR-------
+
+QuerySelctor returns the first element that matches Class, ID
+
+
+
+
+
+
+
+-------LET VAR CONST---------
+
+Const c;
+ c =30 //we cannot write like this 
+ 
+ 
+ 
+ 
+------ LOOPS------- 
+
+For loop 
+
+
+
+// for( let year = 2023; year <= 2027; year++ ){
+
+    //     console.log("You are still in college", year)
+    
+    // }
+
+
+//year = year + 1  and year++
+
+//Print all even numbers in first 50 natural numbers
+
+// for(let i = 1; i<= 50; i++){
+//     if(i%2 == 0){
+//         console.log(i)
+//     }
+// }
+
+//print all odd numbers in natural numbers from 20 to 50
+
+
+// for(let i = 20; i<= 50; i++){
+//     if(i%2 != 0){
+//         console.log(i)
+//     }
+// }
+
+//3. print all numbers which are divisible by 5.
+         
+// let arr = [12, 45, 67, 89, 90, 34, 35, 55]
+
+// console.log(arr[0])
+// console.log(arr[1])
+// console.log(arr[2])
+// console.log(arr[3])
+// console.log(arr[4])
+// console.log(arr[5])
+
+// for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] % 5 == 0){
+//         console.log(arr[i])
+//     }
+// }
+
+//Print all numbers of this array
+   
+// let numberList = [  [1,2, 90, 61], [3,4, 0], [5,6], [7,8]  ]
+
+
+// for (let i = 0; i < numberList.length; i++) {
+
+//     for (let j = 0; j < numberList[i].length; j++) {
+//         console.log(numberList[i][j])
+//     }
+// }
+
+//Print all prime numbers occurring in 1st 50 natural numbers
+
+// let number = 9
+
+// let divisibleCount = 0  (except itself and 1)
+
+// 2,3 ... 8
+
+// let a = true
+// 7%2 == 0 
+// 7%3 == 0  // this number is not a prime
+// 7%4 == 0
+// 7%5 == 0
+// 7%6 == 0
+
+// let isPrimeNumber = true
+
+// let number = 7
+
+// for (let dividend = 2; dividend < number; dividend++) {
+    
+//     if(number % dividend == 0){
+//         isPrimeNumber =false
+//         break;
+//     }
+    
+// }
+
+// if(isPrimeNumber){
+//     console.log("prime number")
+// } else{
+//     console.log("not a prime number")
+// }
+
+for (let number = 2; number <= 50; number++) {
+        
+    let isPrimeNumber = true
+
+
+    for (let dividend = 2; dividend < number; dividend++) {
+        
+        if(number % dividend == 0){
+            isPrimeNumber =false
+            break;
+        } 
+        
+    }
+    
+    if(isPrimeNumber){
+        console.log(number, "is prime number")
+    } 
+    
+}
+
+
+
+
+L
+
+  
+  
+  
